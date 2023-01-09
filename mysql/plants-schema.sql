@@ -1,0 +1,42 @@
+CREATE TABLE pots (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    size VARCHAR(55) NOT NULL ,
+    hashID VARCHAR(45)
+);
+
+CREATE TABLE plants (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    varietyID INT NOT NULL,
+    potID INT NOT NULL,
+    activeStatus INT NOT NULL DEFAULT 1,
+    repottedDate1 DATETIME NOT NULL DEFAULT NOW(),
+    repottedDate2 DATETIME,
+    hashID VARCHAR(45),
+    
+    FOREIGN KEY(varietyID) REFERENCES varieties(id),
+    FOREIGN KEY(potID) REFERENCES pots(id)
+);
+
+CREATE TABLE plantsComments (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	plantID INT NOT NULL,
+    plantComment VARCHAR(255) NOT NULL,
+    createdDate TIMESTAMP NOT NULL DEFAULT NOW(),
+    FOREIGN KEY(plantID) REFERENCES plants(id)
+);
+
+CREATE TABLE plantsMeasurements (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	plantID INT NOT NULL,
+    measurement INT NOT NULL,
+    createdDate TIMESTAMP NOT NULL DEFAULT NOW(),
+    FOREIGN KEY(plantID) REFERENCES plants(id)
+);
+
+CREATE TABLE plantsPhotos (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	plantID INT NOT NULL,
+    imgURL VARCHAR(155) NOT NULL,
+    createdDate TIMESTAMP NOT NULL DEFAULT NOW(),
+    FOREIGN KEY(plantID) REFERENCES plants(id)    
+);
