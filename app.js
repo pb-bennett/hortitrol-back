@@ -17,3 +17,4 @@ app.listen(process.env.PORT, () => {
 // QRCode.toString('https://google.com', { type: 'terminal' }, function (err, url) {
 //   console.log(url);
 // });
+4

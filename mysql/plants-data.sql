@@ -1,0 +1,32 @@
+INSERT INTO pots (size, potName, hashID)
+VALUES  ('large', 'Castillo', 'e55c920bf4f815ca053cef5f12ac99e0'),
+        ('large', 'Odonnell', '23290acc6d3ebe035ad627de9463d878'),
+        ('large', 'Gregory', '07d3d4e0ac3aa3e09d23cf553d71a2de'),
+        ('large', 'Mcgee', 'a785971682ded0402000a9931ebf2e87'),
+        ('large', 'Brennan', '60e24325eededaa9beaedd2e4a90150f'),
+        ('large', 'Harrison', '85709c074c3c4fb40c22fdf52f612733'),
+        ('large', 'Winters', '762475b17f7ea47df8e031bd140ab48d'),
+        ('large', 'Moran', '06103beb307a2cef6b752280456cad4d'),
+        ('large', 'Miller', 'b7d7e0683103e4a07115cba8639d1bb8'),
+        ('large', 'Conway', 'bd0aa035a69ebec02d916f04bc4f4257'),
+        ('medium', 'Holmes', '58cdcb7e89c99bc03b6f749fc69cb3f8'),
+        ('medium', 'Duncan', '94e8026a757b6b27efc4da2196933a26'),
+        ('medium', 'Chambers', 'fcf726be31f965ae8a6c2c30b0c68f4d'),
+        ('medium', 'Hopkins', '3218bad95da2663cbfc66e51f65bf041'),
+        ('medium', 'Larson', '6a08800337d9feb82d6f7ae48f33fa5c'),
+        ('medium', 'Sanford', '20e1d52505a8ff245e7c7a8b3e3d263d'),
+        ('medium', 'Osborn', '56126ae097ca298c8d637021d711be8f'),
+        ('medium', 'Miranda', '9a1a202c554de7fbce6ea9ab50a73d25'),
+        ('small', 'Wallace', '16119afc1060c2eff8d48a43b640aca4'),
+        ('small', 'Landry', 'b02d5b7cc2371034de2a50880513789b'),
+        ('small', 'Lee', '54c84cb22b629baa0281cddd5aacf5c6'),
+        ('small', 'Foster', 'd1c3981128b0c2a860c5c2329196e645'),
+        ('small', 'Combs', '3b3c4a581b7cbbdfaf9cd813a6010041'),
+        ('small', 'Santana', '1235576b3d686db2ed9f3c80fd52b144'),
+        ('small', 'Stein', '8fdbf975a49514455789681969802f3c'),
+        ('small', 'Lambert', '246175b4adc79951119cef68501ea07a'),
+        ('small', 'Lowe', 'a14dfd04d7e7e60e2a38f94bafbb7671'),
+        ('small', 'West', 'b8b93973107f0ffcfa0b46a373d4fba4');
+
+INSERT INTO plants (varietyID, potID, batchID, hashID)
+VALUES  ();

@@ -40,8 +40,7 @@ VALUES	(1, 'hundreds-thousands-001'),
         (6, 'cherry-falls-002'),
         (6, 'cherry-falls-003')
   
-  SELECT * FROM varieties
-	JOIN varietiesURLs ON varietiesURLs.varietyID = varieties.id; 
+  
         
 
         
