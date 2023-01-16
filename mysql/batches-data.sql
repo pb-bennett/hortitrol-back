@@ -38,10 +38,10 @@ VALUES  (1, '5 extra seeds in the packet, bonus!  Used potting soil.', '2023-01-
         (4, '3 too few seeds in pack :(  Used potting soil.', '2023-01-12 15:04:12'),
         (5, 'Cat attack!  Hope we not lost any seeds.', '2023-01-12 15:10:12'),
         (6, 'Used potting soil.', '2023-01-12 15:25:12'),
-        (7, 'First of the second round of planting. All smooth.  Potting soil.' '2023-01-23 11:12:15'),
-        (8, 'Potting soil. Some wastage.' '2023-01-23 11:25:15'),
-        (9, 'Potting soil. All seeds used up - only 8 of planned 12 planted.' '2023-01-23 11:34:15'),
-        (10, 'Potting soil. All good, nothing to see here.' '2023-01-23 12:10:15'),
+        (7, 'First of the second round of planting. All smooth.  Potting soil.', '2023-01-23 11:12:15'),
+        (8, 'Potting soil. Some wastage.', '2023-01-23 11:25:15'),
+        (9, 'Potting soil. All seeds used up - only 8 of planned 12 planted.' ,'2023-01-23 11:34:15'),
+        (10, 'Potting soil. All good, nothing to see here.' ,'2023-01-23 12:10:15'),
         (11, 'USed potting soil again, 7 of 12 planted.  Run out of seeds.','2023-01-23 12:15:15' ),
         (12, 'Last of potting soil used up.  Possibly too little in some pots.', '2023-01-23 12:34:16');
 
