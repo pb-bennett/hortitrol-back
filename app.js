@@ -19,11 +19,6 @@ app.use(
   })
 );
 
-// dbLookup();
-// app.get('/', (req, res) => {
-//   res.status(200).send('Hello from the server');
-// });
-
 app.listen(port, () => {
   console.log(`Server started.  Listening on port ${port}`);
 });
