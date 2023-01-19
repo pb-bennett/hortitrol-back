@@ -4,7 +4,7 @@ const varietiesController = require('../controllers/varietiesController');
 
 const router = express.Router();
 
-router.route('/').get(varietiesController.getAllVarieties);
+router.route('/').get(varietiesController.getAllVarieties).post(varietiesController.newVariety);
 
 router.route('/:id').get(varietiesController.getVariety);
 

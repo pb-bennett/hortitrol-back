@@ -10,7 +10,6 @@ CREATE TABLE varieties (
 	varietyName VARCHAR(155) NOT NULL UNIQUE,
 	plantType VARCHAR(155) NOT NULL,
 	dateCreated TIMESTAMP NOT NULL DEFAULT NOW(),
-	slug VARCHAR(155) NOT NULL,
 	editDate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
@@ -152,13 +151,13 @@ CREATE TABLE plantsPhotos (
 
 /* varieties data */
 
-INSERT INTO varieties (varietyName, plantType, slug) 
-VALUES 	('Hundreds & Thousands', 'Tomato', 'hundreds-thousands'),
-		('Black Cherry', 'Tomato','black-cherry'),
-        ('Bonsai', 'Tomato', 'bonsai'),
-        ('Aftershock', 'Tomato', 'aftershock'),
-        ('Millefleur', 'Tomato', 'millefleur'),
-        ('Cherry Falls', 'Tomato', 'cherry-falls');
+INSERT INTO varieties (varietyName, plantType) 
+VALUES 	('hundreds & thousands', 'tomato'),
+		('black Cherry', 'tomato'),
+        ('bonsai', 'tomato'),
+        ('aftershock', 'tomato'),
+        ('millefleur', 'tomato'),
+        ('cherry falls', 'tomato');
 
 INSERT INTO varietiesURLs (varietyID, varietyURL)
 VALUES	(1, 'https://tomatprat.no/collections/tomatfro-1/products/hundreds-thousands-1'),
