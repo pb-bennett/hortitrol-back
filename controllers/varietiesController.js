@@ -9,6 +9,7 @@ const models = initModels(sequelize);
 
 exports.getAllVarieties = async function (req, res, next) {
   try {
+    console.log(req.query);
     const results = await models.varieties.findAll();
 
     return res.status(200).json({
