@@ -12,10 +12,17 @@ const searchBuilder = require('sequelize-search-builder');
 
 exports.getAllVarieties = async function (req, res, next) {
   try {
-    console.log(Object.keys(models.varieties.rawAttributes));
+    // console.log(viableComlumns);
+    const search = new searchBuilder(models.varieties, req.query),
+      whereQuery = search.getWhereQuery(),
+      orderQuery = search.getOrderQuery(),
+      limitQuery = search.getLimitQuery(),
+      offsetQuery = search.getOffsetQuery();
+    // const apiQueries = new APIQueries(models.varieties, req.query);
+    // const query = apiQueries.filter();
     const results = await models.varieties.findAll({
       include: [{ all: true, nested: true, duplicating: false }],
-      where: [req.query],
+      where: [whereQuery],
     });
 
     return res.status(200).json({

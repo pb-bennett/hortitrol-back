@@ -1,12 +1,17 @@
+const pick = require('lodash.pick');
+
 class APIQueries {
-  constructir(model, query) {
+  constructor(model, query) {
     this.model = model;
     this.query = query;
   }
 
   filter() {
-    const queryObj = { ...this.query };
-    console.log(queryObj);
+    console.log(Object.keys(this.model.rawAttributes));
+    console.log(this.query);
+    const allowed = pick(this.query, Object.keys(this.model.rawAttributes));
+    console.log('this is allowed:', allowed);
+    return allowed;
   }
 }
 
