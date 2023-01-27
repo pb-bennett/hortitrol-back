@@ -2,15 +2,21 @@ const Joi = require('joi');
 
 const sequelize = require('../db');
 const initModels = require('../models/init-models');
+const APIQueries = require('../utils/apiQueries');
 
 const models = initModels(sequelize);
+
+const searchBuilder = require('sequelize-search-builder');
 
 // console.log(models);
 
 exports.getAllVarieties = async function (req, res, next) {
   try {
-    console.log(req.query);
-    const results = await models.varieties.findAll();
+    console.log(Object.keys(models.varieties.rawAttributes));
+    const results = await models.varieties.findAll({
+      include: [{ all: true, nested: true, duplicating: false }],
+      where: [req.query],
+    });
 
     return res.status(200).json({
       status: 'success',

@@ -17,10 +17,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       unique: "trayName"
     },
-    hashID: {
-      type: DataTypes.STRING(45),
-      allowNull: true
-    },
     createdDate: {
       type: DataTypes.DATE,
       allowNull: false,

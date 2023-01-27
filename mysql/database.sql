@@ -160,11 +160,19 @@ CREATE TABLE hashes (
 
 INSERT INTO varieties (varietyName, plantType) 
 VALUES 	('hundreds & thousands', 'tomato'),
-		('black Cherry', 'tomato'),
+		('black cherry', 'tomato'),
         ('bonsai', 'tomato'),
         ('aftershock', 'tomato'),
         ('millefleur', 'tomato'),
-        ('cherry falls', 'tomato');
+        ('cherry falls', 'tomato'),
+        ('agata', 'potato'),
+        ('almond', 'potato'),
+        ('champion', 'potato'),
+        ('espirit', 'potato'),
+        ('anaheim', 'chilli'),
+        ('cayenne', 'chilli'),
+        ('jalapeno', 'chilli'),
+        ('sarrano', 'chilli');
 
 INSERT INTO varietiesURLs (varietyID, varietyURL)
 VALUES	(1, 'https://tomatprat.no/collections/tomatfro-1/products/hundreds-thousands-1'),

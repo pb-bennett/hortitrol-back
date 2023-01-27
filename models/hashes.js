@@ -1,25 +1,19 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('pots', {
-    id: {
-      autoIncrement: true,
-      type: DataTypes.INTEGER,
+  return sequelize.define('hashes', {
+    hashID: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    IDType: {
+      type: DataTypes.STRING(45),
       allowNull: false,
       primaryKey: true
     },
-    size: {
-      type: DataTypes.STRING(55),
-      allowNull: false
-    },
-    potName: {
-      type: DataTypes.STRING(55),
-      allowNull: false,
-      unique: "potName"
-    },
-    activeStatus: {
+    ForeignID: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 1
+      primaryKey: true
     },
     createdDate: {
       type: DataTypes.DATE,
@@ -33,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     sequelize,
-    tableName: 'pots',
+    tableName: 'hashes',
     timestamps: false,
     indexes: [
       {
@@ -41,15 +35,8 @@ module.exports = function(sequelize, DataTypes) {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id" },
-        ]
-      },
-      {
-        name: "potName",
-        unique: true,
-        using: "BTREE",
-        fields: [
-          { name: "potName" },
+          { name: "IDType" },
+          { name: "ForeignID" },
         ]
       },
     ]

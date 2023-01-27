@@ -46,10 +46,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATE,
       allowNull: true
     },
-    hashID: {
-      type: DataTypes.STRING(45),
-      allowNull: true
-    },
     editDate: {
       type: DataTypes.DATE,
       allowNull: false,

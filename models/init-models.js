@@ -3,6 +3,7 @@ var _batchComments = require("./batchComments");
 var _batchMeasurements = require("./batchMeasurements");
 var _batchPhotos = require("./batchPhotos");
 var _batches = require("./batches");
+var _hashes = require("./hashes");
 var _plants = require("./plants");
 var _plantsComments = require("./plantsComments");
 var _plantsMeasurements = require("./plantsMeasurements");
@@ -18,6 +19,7 @@ function initModels(sequelize) {
   var batchMeasurements = _batchMeasurements(sequelize, DataTypes);
   var batchPhotos = _batchPhotos(sequelize, DataTypes);
   var batches = _batches(sequelize, DataTypes);
+  var hashes = _hashes(sequelize, DataTypes);
   var plants = _plants(sequelize, DataTypes);
   var plantsComments = _plantsComments(sequelize, DataTypes);
   var plantsMeasurements = _plantsMeasurements(sequelize, DataTypes);
@@ -60,6 +62,7 @@ function initModels(sequelize) {
     batchMeasurements,
     batchPhotos,
     batches,
+    hashes,
     plants,
     plantsComments,
     plantsMeasurements,
