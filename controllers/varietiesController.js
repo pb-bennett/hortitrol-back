@@ -10,7 +10,7 @@ const searchBuilder = require('sequelize-search-builder');
 
 // console.log(models);
 
-exports.getAllVarieties = async function (req, res, next) {
+exports.searchAllVarieties = async function (req, res, next) {
   try {
     // console.log(viableComlumns);
     const search = new searchBuilder(models.varieties, req.query),
@@ -20,13 +20,36 @@ exports.getAllVarieties = async function (req, res, next) {
       offsetQuery = search.getOffsetQuery();
     // const apiQueries = new APIQueries(models.varieties, req.query);
     // const query = apiQueries.filter();
+
     const results = await models.varieties.findAll({
-      include: [{ all: true, nested: true, duplicating: false }],
-      where: [whereQuery],
+      // include: [{ all: true, nested: false, duplicating: false }],
+      include: [{ model: models.varietiesPhotos, as: 'varietiesPhotos' }],
+      where: whereQuery,
+      order: orderQuery,
+      limit: limitQuery,
+      offset: offsetQuery,
+      // logging:
     });
 
     return res.status(200).json({
       status: 'success',
+      length: results.length,
+      results: results,
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+exports.getAllVarieties = async function (req, res, next) {
+  try {
+    const results = await models.varieties.findAll({
+      // include: [{ all: true, nested: true, duplicating: false }],
+    });
+
+    return res.status(200).json({
+      status: 'success',
+      length: results.length,
       results: results,
     });
   } catch (error) {
@@ -56,7 +79,7 @@ exports.getVariety = async function (req, res, next) {
     const result = await models.varieties.findByPk(id);
     if (!result)
       return res.status(404).json({
-        status: 'failure',
+        status: 'error',
         result: `ID ${id} not found in database.`,
       });
 

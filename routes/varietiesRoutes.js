@@ -5,6 +5,7 @@ const varietiesController = require('../controllers/varietiesController');
 const router = express.Router();
 
 router.route('/').get(varietiesController.getAllVarieties).post(varietiesController.newVariety);
+router.route('/search').get(varietiesController.searchAllVarieties);
 
 router.route('/:id').get(varietiesController.getVariety).delete(varietiesController.deleteVariety).patch(varietiesController.updateVariety);
 
