@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon run app.js"
+    "start": "nodemon run app.js",
+    "debug": "ndb app.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "livereload": "^0.9.3",
+    "ndb": "^1.1.5",
     "nodemon": "^2.0.20"
   }
 }

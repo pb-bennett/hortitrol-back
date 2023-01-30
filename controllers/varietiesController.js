@@ -53,7 +53,7 @@ exports.newVariety = catchAsync(async function (req, res, next) {
   const result = await models.varieties.create({ varietyName, plantType });
   console.log(result);
 
-  return res.status(200).json({
+  return res.status(201).json({
     status: 'success',
     results: result.dataValues,
   });
@@ -110,7 +110,7 @@ exports.deleteVariety = catchAsync(async function (req, res, next) {
       id,
     },
   });
-  return res.status(200).json({
+  return res.status(204).json({
     status: 'success',
     results: 'Deleted',
   });

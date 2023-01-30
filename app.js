@@ -45,3 +45,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server started.  Listening on port ${port}`);
 });
+
+// sequelize-auto -h 192.168.1.100 -d hortitrol -o "./models" -u remote-admin -p 3306 -e mysql -x
